@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
-
+//yasm -g dwarf2 -f elf64 even.asm 
+// gcc -g -o even even.c even.o  
 //implement this function in assembly returns number of even numbers found in array src
 
 // also updates even and odd arrays which are passed as an argument
@@ -22,11 +23,9 @@ int main(int argc, char** argv)
 
      
         //rdi //rsi //rdx //rcx
-      uint32_t n = evens_and_odds(source, even, odd, 3);
+      uint32_t n = evens_and_odds(source, even, odd, 14);
 
-       for (int i =0; i< n; i++)
-
-        {
+       for (int i = 0; i < n; i++){
 
            printf(" %d ",even[i]);
 
