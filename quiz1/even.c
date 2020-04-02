@@ -22,7 +22,7 @@ int main(int argc, char** argv)
 
      
         //rdi //rsi //rdx //rcx
-      uint32_t n = evens_and_odds(source, even, odd, 3);
+      uint32_t n = evens_and_odds(source, even, odd, 14);
 
        for (int i =0; i< n; i++)
 
