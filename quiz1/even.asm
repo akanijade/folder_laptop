@@ -1,5 +1,10 @@
 global evens_and_odds
 
+<<<<<<< HEAD
+=======
+
+section .text
+>>>>>>> 8e7a777403a2cc886e1c135f862e5a8870ab8d25
 
 section .text
 ;note: rdi = source array address
@@ -10,8 +15,13 @@ section .text
 evens_and_odds:
     push rbp
 	mov rbp, rsp
+<<<<<<< HEAD
 	mov r15, 0          ;n is number of even numbers
     cmp rcx, 0          ;size
+=======
+	mov r15, 0
+    cmp rcx, 0 ;size
+>>>>>>> 8e7a777403a2cc886e1c135f862e5a8870ab8d25
     je rexit
 
 
@@ -19,10 +29,17 @@ next:
     sub rcx, 1          ;decrease size by 1 byte
     cmp rcx, -1         ;exiting condition
     je rexit
+<<<<<<< HEAD
     push rdx            ;save because cdq will overwrite rdx to null
     mov eax, dword[rdi] ;move rdi to eax for quotient
     cdq
     mov r9w, 2          ;modulus 2
+=======
+    push rdx
+    mov eax, dword[rdi] ;move rdi to eax for quotient
+    cdq
+    mov r9w, 2 ;modulus 2
+>>>>>>> 8e7a777403a2cc886e1c135f862e5a8870ab8d25
     idiv r9w 
     cmp edx, 0          ;reminder in edx and check if it's evens 
     pop rdx
@@ -31,21 +48,38 @@ next:
     
 
 even:
+<<<<<<< HEAD
 	inc r15              ;increment size of n
     mov eax, dword[rdi]  ;dereferencing 4 bytes
     mov dword[rsi], eax
     add rsi, 4           ;moving to the next index for even array
     add rdi, 4           ;moving to the next index for source array
+=======
+	inc r15
+    mov eax, dword[rdi]
+    mov dword[rsi], eax
+    add rsi, 4
+    add rdi, 4
+>>>>>>> 8e7a777403a2cc886e1c135f862e5a8870ab8d25
     jmp next
 
 odd:
     mov eax, dword[rdi]
     mov dword[rdx], eax
+<<<<<<< HEAD
     add rdx, 4          ;move to next index for odd array
     add rdi, 4          ;move to next index for source array
     jmp next
 
 rexit: ;epilogue
 	mov rax, r15        ;move value n to rax for return
+=======
+    add rdx, 4
+    add rdi, 4
+    jmp next
+
+rexit: ;epilogue
+	mov rax, r15
+>>>>>>> 8e7a777403a2cc886e1c135f862e5a8870ab8d25
     pop rbp
     ret

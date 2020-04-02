@@ -24,6 +24,11 @@ int main(int argc, char** argv)
      
         //rdi //rsi //rdx //rcx
       uint32_t n = evens_and_odds(source, even, odd, 14);
+<<<<<<< HEAD
+=======
+
+       for (int i =0; i< n; i++)
+>>>>>>> 8e7a777403a2cc886e1c135f862e5a8870ab8d25
 
        for (int i = 0; i < n; i++){
 
