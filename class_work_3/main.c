@@ -16,5 +16,7 @@ int x = variance(src, tmp, 10);
 printf("avg: %d \n", x);
 for(int i = 0; i < 10; i++)
     printf("tmp: %d ", tmp[i]);
+
+printf("sum: %d \n", )
 return 0;
 }
