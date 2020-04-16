@@ -5,12 +5,16 @@ section .text
 
 absolute_asm:
     push rbp
-	mov rbp, rsp
-    mov eax, dword[rdi]
-    cdq
-    xor eax, edx
-    sub eax, edx
-    
+    mov rbp, rsp
+    mov eax, edi
+    cmp eax, 0    
+    jl two
+    jmp rexit
+   
+two:
+	xor eax, 0xFFFFFFFF
+	add eax, 1
+ 
 rexit: ;epilogue
     pop rbp
     ret
