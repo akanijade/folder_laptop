@@ -22,7 +22,6 @@ __m256 z = _mm256_mul_ps (x, y);
 //_mm256_storeu_ps (&r[i], z);
 __m256 s = _mm256_hadd_ps(z, z);
 float sum = ((float*)&s)[0]+((float*)&s)[1] + ((float*)&s)[4]+((float*)&s)[5];
-
 //float sum = *(float *)&s;
 //_mm256_storeu_ps (r, s);
 printf("%f \n", sum);
