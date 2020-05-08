@@ -35,7 +35,7 @@ for (int i = 0; i < 2; ++i) //more efficient
     __m128 y = _mm_load_ps(&yy[i*4]);  //load 128-bits from yy array
 
     __m128 z = _mm_mul_ps(x, y);        //multiply single-precisino floating point in x and y
-    _mm_storeu_ps (&r[i], z);           //store 128-bits from z to array r
+    _mm_storeu_ps (&r[i*4], z);           //store 128-bits from z to array r
 
 for (int i = 0; i<4; i++)
     printf("%f \n", r[i]);              //print the array r
