@@ -71,7 +71,7 @@ int main(int avgc, char** avgs)
     //count++
     //msg = false
     //pthread_join(thread1, NULL);
-    printf("how many times number matches with "1": %d\n",count);
+    printf("how many times number matches with 1: %d\n",count);
     //i = 0;
     //pthread_join(thread2, NULL);
     return 0;

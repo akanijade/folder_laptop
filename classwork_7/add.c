@@ -18,9 +18,9 @@ __m256 y = _mm256_loadu_ps(yy);
 
 //__m128 x = _mm_set_ps (1.2, 1.3, 1.4, 1.5);
 //__m128 y = _mm_set_ps (1.2, 1.3, 1.4, 1.5);
-__m256 z = _mm256_mul_ps (x, y); 
+__m256 z = _mm256_mul_ps (x, y); //1.2^2
 //_mm256_storeu_ps (&r[i], z);
-__m256 s = _mm256_hadd_ps(z, z);
+__m256 s = _mm256_hadd_ps(z, z); // 1.44+1.69+1.96+
 float sum = ((float*)&s)[0]+((float*)&s)[1] + ((float*)&s)[4]+((float*)&s)[5];
 //float sum = *(float *)&s;
 //_mm256_storeu_ps (r, s);
